@@ -1,26 +1,25 @@
-const btnBaguet = document.querySelector(".baguet");
-const btnPueblo = document.querySelector(".pueblo");
-const btnIntegral = document.querySelector(".integral");
-const btnCroissant = document.querySelector(".croissant");
-const btnQueso = document.querySelector(".queso");
-const btnBocaditos = document.querySelector(".bocaditos");
-
 const btnGeneral = document.querySelector(".container__btn");
-
 const imagenes = document.querySelector(".container__img");
-
+const figure = document.querySelectorAll(".container__figure");
 const main = document.querySelector(".container");
-
-const contenedor = document.querySelector(".container__article");
+console.log(figure)
 
 
 function cambiarColor (){
-    main.style.backgroundColor = "#D7EB78";
-    btnGeneral.style.color = "white";
+       main.style.backgroundColor = "#D7EB78";
+    //btnGeneral.style.color = "white";
 }
-function redondear (){
-    imagenes.style.borderRadius = "100px" ;
+function redondear (e){
+    e.target.classList.add('bagette')
 }
-btnGeneral.addEventListener("click", cambiarColor);
 
-main.addEventListener("mouseover", redondear);
+function quitarRedondo(e){
+    e.target.classList.remove('bagette')
+}
+
+
+btnGeneral.addEventListener("click", cambiarColor);
+figure.forEach(item => item.addEventListener("mouseover", e => redondear(e)))
+figure.forEach(item => item.addEventListener("mouseout", e => quitarRedondo(e)))
+
+
