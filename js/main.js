@@ -1,12 +1,26 @@
-const imagen2 = document.querySelector(".img2");
-const imagen3 = document.querySelector(".img3");
-const main = document.querySelector(".main");
+const btnBaguet = document.querySelector(".baguet");
+const btnPueblo = document.querySelector(".pueblo");
+const btnIntegral = document.querySelector(".integral");
+const btnCroissant = document.querySelector(".croissant");
+const btnQueso = document.querySelector(".queso");
+const btnBocaditos = document.querySelector(".bocaditos");
+
+const btnGeneral = document.querySelector(".container__btn");
+
+const imagenes = document.querySelector(".container__img");
+
+const main = document.querySelector(".container");
+
+const contenedor = document.querySelector(".container__article");
+
 
 function cambiarColor (){
-    main.style.backgroundColor = "#f17929";
+    main.style.backgroundColor = "#D7EB78";
+    btnGeneral.style.color = "white";
 }
-function cambiarPosicion (){
-    imagen3.style.order = -1;
+function redondear (){
+    imagenes.style.borderRadius = "100px" ;
 }
-imagen2.addEventListener("click", cambiarColor);
-imagen3.addEventListener("click", cambiarPosicion);
+btnGeneral.addEventListener("click", cambiarColor);
+
+main.addEventListener("mouseover", redondear);
