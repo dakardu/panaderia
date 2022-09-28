@@ -32,11 +32,36 @@
 .container__article{
     width: 33%;
     background-color: #ecda99;
-    border-radius: 50px;   
+    border-radius: 50px;
+    height: 400px;
+    width: 400px;  
 }
 .container__img{
+    border-radius: 20px;
     height: 300px;
     width: 300px;
 }
+.container__btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: #F2EF44;
+}
+.footer{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/cabeceroManos.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.footer__li{
+    list-style: none;
+    font-size: 1.2rem;
+}
+
 
 
