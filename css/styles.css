@@ -81,6 +81,9 @@ colorres{
     padding: 0.7rem;
     margin: 1rem 0 0 3rem;
 }
+.container__btn:hover{
+    background-color: #d7eb78;
+}
 
 
 .footer{

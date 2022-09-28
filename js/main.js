@@ -1,15 +1,20 @@
-const btnGeneral = document.querySelector(".container__btn");
-const imagenes = document.querySelector(".container__img");
+const btnComprar = document.querySelectorAll(".container__btn");
 const figure = document.querySelectorAll(".container__figure");
 const main = document.querySelector(".container");
-console.log(figure)
+//console.log(figure)
 
 
-function cambiarColor (){
-       main.style.backgroundColor = "#D7EB78";
-    //btnGeneral.style.color = "white";
+function crearBtnPrecio (e){
+    //console.log(e)
+        let btnPrecio = document.createElement('button')
+        e.target.after(btnPrecio)
+        btnPrecio.innerHTML = 'Precio'
+        btnPrecio.classList.add('container__btn')
+        setTimeout(() => btnPrecio.remove(), 5000);
 }
+
 function redondear (e){
+    // console.log(e)
     e.target.classList.add('bagette')
 }
 
@@ -18,7 +23,8 @@ function quitarRedondo(e){
 }
 
 
-btnGeneral.addEventListener("click", cambiarColor);
+//btnComprar.addEventListener('click', crearBtnPrecio)
+btnComprar.forEach(item => item.addEventListener('click', e => crearBtnPrecio(e)));
 figure.forEach(item => item.addEventListener("mouseover", e => redondear(e)))
 figure.forEach(item => item.addEventListener("mouseout", e => quitarRedondo(e)))
 
