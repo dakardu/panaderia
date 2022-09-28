@@ -2,6 +2,13 @@
     font-family: "Macondo";
     src: url("../fonts/Macondo/Macondo-Regular.ttf");
 }
+colorres{
+    color: #ebd071;
+    color: #f5d317;
+    color: #dbcf48;
+    color: #f2ef44;
+    color: #d7eb78;
+}
 *{
     margin: 0;
     padding: 0;
@@ -23,30 +30,56 @@
     color: white;
     font-size: 3rem;
 }
+
+
 .container{
     background-color: #EBD071;
 }
 .container__section{
     display: flex;
+    padding-bottom: 1rem;
+}
+.container__h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.container__h3{
+    text-align: center;
+    padding: 0.5rem;
+}
+.container__p{
+    text-align: center;
 }
 .container__article{
     width: 33%;
     background-color: #ecda99;
-    border-radius: 50px;
-    height: 400px;
-    width: 400px;  
+    border-radius: 25px 25px;
+    height: 500px;
+    width: 400px;
+    margin-left: 0.7rem;  
+}
+.container__figure{
+    padding: 1rem 0 1rem 3rem;
 }
 .container__img{
-    border-radius: 20px;
     height: 300px;
     width: 300px;
+    border: 1px solid #d7eb78;
+    border-radius: 25px 25px;
 }
 .container__btn{
-    height: 40px;
-    width: 100px;
-    border-radius: 50px;
-    background-color: #F2EF44;
+    width: 120px;
+    border: 1px solid #d7eb78;
+    border-radius: 25px 25px;
+    background-color: #ebd071;
+    text-transform: uppercase;
+    padding: 0.7rem;
+    margin: 1rem 0 0 3rem;
 }
+
+
 .footer{
     height: 150px;
     display: flex;
@@ -61,6 +94,7 @@
 .footer__li{
     list-style: none;
     font-size: 1.2rem;
+    color: white;
 }
 
 
