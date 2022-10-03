@@ -14,7 +14,7 @@ function crearBtnPrecio (e){
 }
 
 function redondear (e){
-    // console.log(e)
+    //console.log(e)
     e.target.classList.add('bagette')
 }
 
